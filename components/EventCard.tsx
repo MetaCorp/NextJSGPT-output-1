@@ -10,7 +10,7 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const { deleteEvent } = useEvents();
 
-  const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleDelete = (e: any) => {
     e.preventDefault(); // To prevent navigation
     deleteEvent(event.id);
   };
